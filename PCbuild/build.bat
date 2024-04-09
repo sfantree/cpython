@@ -57,9 +57,9 @@ exit /b 127
 
 :Run
 setlocal
-set platf=x64
-set conf=Release
-set target=Build
+set platf=Win32
+set conf=Debug
+set target=Rebuild
 set dir=%~dp0
 set parallel=/m
 set verbose=/nologo /v:m /clp:summary

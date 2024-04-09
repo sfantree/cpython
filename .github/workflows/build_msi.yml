@@ -27,3 +27,8 @@ jobs:
         fetch-tags: 'v3.12.2'
     - name: Build CPython installer
       run: .\Tools\msi\build.bat --doc -${{ matrix.type }}
+    - uses: actions/upload-artifact@v4
+      with:
+        name: CPythonInstaller
+        path: ./PCbuild/**/*.exe
+        compression-level: 9

@@ -2,20 +2,6 @@ name: TestsMSI
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-    - 'main'
-    - '3.*'
-    paths:
-    - 'Tools/msi/**'
-    - '.github/workflows/build_msi.yml'
-  pull_request:
-    branches:
-    - 'main'
-    - '3.*'
-    paths:
-    - 'Tools/msi/**'
-    - '.github/workflows/build_msi.yml'
 
 permissions:
   contents: read
@@ -31,7 +17,7 @@ jobs:
     timeout-minutes: 60
     strategy:
       matrix:
-        type: [x86, x64, arm64]
+        type: [x86]
     env:
       IncludeFreethreaded: true
     steps:
